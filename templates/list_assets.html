@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Assets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .item img, .item video {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .item p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .back-button {
+            
+            margin-left: 50px;
+            padding: 10px 20px;
+            float: right;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Paneline Dön Butonu -->
+    
+    
+    <h1>Uploaded Media<a href="https://1f7e-161-9-199-131.ngrok-free.app/public/admin" class="back-button">Admin Paneline Geri Dön</a></h1> 
+    <div class="gallery">
+       
+        {% for asset in assets %}
+        <div class="item">
+            {% if 'image' in asset.type %}
+            <img src="{{ asset.url }}" alt="{{ asset.name }}">
+            {% elif 'video' in asset.type %}
+            <video controls>
+                <source src="{{ asset.url }}" type="{{ asset.type }}">
+                Your browser does not support the video tag.
+            </video>
+            {% endif %}
+            <p>{{ asset.name }}</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+
+    
+    
+</body>
+</html>

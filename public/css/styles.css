@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#chat-container {
+    width: 8100px;
+    max-width: 90%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-header h2 {
+    margin: 0;
+    color: #007bff;
+}
+
+#messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;  /* Mesajlar için sabit bir yükseklik verilebilir */
+    overflow-y: scroll;  /* Yüksekliği aşan içerikler kaydırılabilir */
+}
+
+#messages li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#messages li:nth-child(odd) {
+    background: #e9ecef;
+}
+
+#messages li:nth-child(even) {
+    background: #ffffff;
+}
+
+#chat-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#chat-input button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chat-input button:hover {
+    background: #0056b3;
+}
+
+#file-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#file-upload-container label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#file-upload-container label:hover {
+    background-color: #0056b3;
+}
+
+#file-upload-container input[type="file"] {
+    display: none;
+}
+
+#file-upload-container button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#file-upload-container button:hover {
+    background: #218838;
+}
+
+#register-container {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+#register-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#register-container button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+#register-container button:hover {
+    background: #0056b3;
+}
+
+#search-container {
+    margin-bottom: 10px;
+}
+#search-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+

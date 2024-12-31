@@ -1,0 +1,8 @@
+CRITICAL - 2024-12-18 23:02:07 --> ErrorException: Maximum execution time of 120 seconds exceeded
+[Method: GET, Route: PythonBackend/py_calistir]
+in APPPATH\Controllers\PythonBackend.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-12-18 23:06:00 --> ErrorException: Maximum execution time of 120 seconds exceeded
+[Method: GET, Route: PythonBackend/py_calistir]
+in APPPATH\Controllers\PythonBackend.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
